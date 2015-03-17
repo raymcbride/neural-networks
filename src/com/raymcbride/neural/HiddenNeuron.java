@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The HiddenNeuron class is used to create Hidden Neurons
  *

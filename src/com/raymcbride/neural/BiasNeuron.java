@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The BiasNeuron class creates Bias Neurons which have a fixed value of -1
  *

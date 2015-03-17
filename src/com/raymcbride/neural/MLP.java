@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The MLP class is used to create Multilayer Perceptron networks
  *

@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 import java.util.*;
 import java.io.*;
 import javax.xml.parsers.*;

@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The OutputNeuron class creates Output Neurons
  *

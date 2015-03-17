@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * InputNeuron class is used to create Input Neurons
  *

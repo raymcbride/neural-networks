@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 import java.io.*;
 import java.util.*;
 

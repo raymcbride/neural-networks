@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The ContextNeuron class creates Context Neuron which are used to provide recurrency
  * in the RNN network. They store the previous Hidden Neuron activated values and a variable
