@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<!--  Please visit http://ant.apache.org/manual/index.html for full documentation of how 
+Ant works. THE DEFAULT IMPLEMENTATION FOR THIS IS target:clean_build.-->
+
+<project name="Raymonds API Top Level build" default="clean_build" basedir=".">
+  <description>This is the top level file for Raymond's API's.</description>
+	    
+<!-- ===================================================================================== -->
+<!-- ==================================== Globals ======================================== -->
+<!-- ===================================================================================== -->
+	
+  <!-- Set global properties for top level build. Assumes a directory structure of ...
+  	
+ 	Root_Dev_Directory/	|- /src  	** All source code **
+  				|- /classes	** All classes ** 
+  				|- /docs	** API docs **
+  				|- /data	** All input data files **
+  				|- /output	** All output files **
+  				|- /resources	** All resource files **
+  				|- /lib		** All jars can go here **  -->
+  
+  <property name="Project" value="Top Level Build for Raymonds API"/>
+  <property name="project.src" location="src"/>
+  <property name="project.classes" location="classes"/>
+  <property name="project.lib"  location="lib"/>
+  <property name="project.docs"  location="docs"/>
+  <property name="project.data"  location="data"/>
+  <property name="project.output"  location="output"/>
+  <property name="project.resources"  location="resources"/>
+  <property name="project.author" value="Raymond McBride"/>
+  
+  <!-- The class root. Use this directory for rebuild. Never delete the classes dir! -->
+  <property name="Package_Class_Root" location="${project.classes}/com/mcbride"/>
+  
+<!-- ===================================================================================== -->
+<!-- ==================================== Imports ======================================== -->
+<!-- ===================================================================================== -->
+		
+  <!-- Import the javac.compiler.classpath options -->
+  <import file="build_options/compiler-options.xml" />
+  	
+  <!-- Import the javadoc  options -->
+  <import file="build_options/javadoc-options.xml" />
+ 	
+<!-- ======================================================================================= -->
+<!-- ==================================== Targets ========================================== -->
+<!-- ======================================================================================= -->
+	
+  <!-- Begin targets -->
+  <!-- All builds dependent upon init creating missing directories - If these directories 
+       already exist then nothing will happen. Also create the time stamps - These are global 
+       properties that can be used anywhere within this build -->
+     
+  <target name="init">
+    <!-- Create the date and time stamps : Use a UK locale -->
+    <tstamp>
+      <format property="TODAY_UK" pattern="d/MMMM/yyyy" locale="en"/>
+      <format property="TIME_UK" pattern="hh:mm" locale="en"/>
+    </tstamp>
+    <mkdir dir="${project.classes}"/>
+    <mkdir dir="${project.lib}"/>
+    <mkdir dir="${project.data}"/>
+    <mkdir dir="${project.output}"/>
+    <mkdir dir="${project.resources}"/>
+  </target>
+
+  <!-- Java Compiler target - This will compile all the src code under the project.src location
+       into the project.classes directory using the same structure as package names.If you need 
+       to change the settings just change the values in the properties defined above for the 
+       relevant setting. Please dont change anything here -->
+  
+  <target name="compile" depends="init" description="compile the source " >
+    <!-- Compile the java code from ${project.src} into ${project.classes} -->
+    <javac srcdir="${project.src}" 
+	   destdir="${project.classes}" 
+	   verbose="${java.compiler.verbose}"
+	   compiler="${java.compiler}"
+	   encoding="${java.compiler.encoding}"
+	   optimize="${java.compiler.optimize}"
+	   deprecation="${java.compiler.deprecation}"
+	   source="${java.compiler.source}">
+	    
+      <!-- The java compiler classpath -->
+      <classpath refid="javac.compiler.classpath"/>
+    </javac>
+  </target>
+  
+  <!-- The Java Archiver target -->
+  <target name="archive" depends="compile" description="archive the source" >
+    <jar destfile="${project.lib}/project.jar" 
+    	 basedir="${project.classes}" 
+    	 includes="**/*">
+    	    
+      <manifest>
+        <attribute name="Built-By" value="${project.author}"/>
+	<attribute name="Implementation-Version" value="${TODAY_UK}-${TIME_UK}"/>
+	<attribute name="Main-Class" value="Test"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="clean" description="clean up" >
+    <!-- Delete the ${project.classes} and all project jars-->
+    <delete dir="${Package_Class_Root}"/>
+    <delete>
+      <fileset dir="${project.classes}" />
+    </delete>
+    <delete>
+      <fileset dir="${project.lib}" includes="*.jar"/>
+    </delete>
+  </target>
+  
+  <target name="full_clean" depends="clean" description="clean up" >
+    <delete dir="${project.docs}"/>
+  </target>
+  
+  <target name="touch" description="touch files">
+    <!-- Update the Last Modified of the ${project.src} files-->
+    <touch>
+      <fileset dir="${project.src}"/>
+    </touch>
+  </target>
+  
+  
+  <!--  Rules to create the java documentation Use packageList="packages.list" 
+        to specify from a list the packages to be documented -->
+  <target name="javadoc" description="javadoc"> 
+    <mkdir dir="${project.docs}"/>
+    <javadoc sourcepath="{project.src}"
+	     sourcefiles="src/BiasNeuron.java, src/ContextNeuron.java, src/ContextSynapse.java, src/DataProcessor.java, src/HiddenNeuron.java, src/InputNeuron.java, src/MLP.java, src/Network.java, src/Neuron.java, src/OutputFile.java, src/OutputNeuron.java, src/RNN.java, src/Synapse.java, src/TDNN.java, src/Test.java, src/XMLParser.java,"
+	     destdir="${project.docs}"
+	     author="${javadoc.author}"
+	     version="${javadoc.version}"
+	     use="${javadoc.use}"
+	     windowtitle="${javadoc.windowtitle}"
+	     source="${javadoc.source}"
+	     linksource="${javadoc.linksource}"
+	     classpathref="javac.compiler.classpath">
+      <doctitle><![CDATA[<h1>${javadoc.doctitle}</h1>]]></doctitle>
+      <bottom><![CDATA[<i>${javadoc.bottom}</i>]]></bottom> 
+      <link href="${javadoc.j2selink}"/>
+    </javadoc>
+  </target>  
+  
+  <target name="clean_build" depends="clean, compile, archive, javadoc" description="Clean build" />
+  <target name="full_build" depends="full_clean, compile, archive, javadoc" 
+          description="Full build" />
+  
+  <target name ="execute" description="Execute a Java program" >
+    <java classname="Test">
+      <classpath refid="javac.compiler.classpath"/>
+    </java>
+  </target>
+  
+  <!--  END TARGETS -->
+  
+</project>

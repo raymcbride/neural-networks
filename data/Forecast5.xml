@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="project.xsl"?>
+<project xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project.xsd">
+<ftse>
+<date>2004-07-05</date>
+<indexValue>4403.2998</indexValue>
+</ftse>
+<ftse>
+<date>2004-07-06</date>
+<indexValue>4370.7002</indexValue>
+</ftse>
+<ftse>
+<date>2004-07-07</date>
+<indexValue>4358.3999</indexValue>
+</ftse>
+<ftse>
+<date>2004-07-08</date>
+<indexValue>4381.1001</indexValue>
+</ftse>
+<ftse>
+<date>2004-07-09</date>
+<indexValue>4393.2002</indexValue>
+</ftse>
+</project>
