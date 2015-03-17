@@ -1,0 +1,51 @@
+<!-- These are the settings for the java compiler classpath and are included by all build.xml 
+     files -->
+     
+<project name="Classpath settings" default="archive" basedir=".">
+  
+  <!-- Java Compiler properties -->
+  
+  <property name="java.compiler" value="javac1.4"/>
+  <property name="java.compiler.source" value="1.4"/>
+  <property name="java.compiler.encoding" value="ISO-8859-1"/>
+  <property name="java.compiler.optimize" value="on"/>
+  <property name="java.compiler.deprecation" value="on"/>
+  <property name="java.compiler.verbose" value="off"/>
+
+  <!-- Classpath Properties - The location of all third-party jars use comma seperated list if 
+       neccessary -->
+       
+  <!-- Java API for XML processing -->
+  
+  <property name="third_party-jars"  value="C:/jwsdp-1.4/jaxp/lib"/>
+  <!--<property name="third_party-jars"  value="C:/junit3.8.1/"/>-->
+  
+  <!--  The classpath for the Java Compiler. Includes various paths so can be easily extended. 
+  	NOTE: To add more third party jars create another property and include it here, or add 
+  	to ${third_party-jars} property  ie , /newlocation/subfolders - must use commas to 
+  	seperate.-->
+  	
+  <path id="javac.compiler.classpath">
+
+    <!-- First place to look is the lib directory under this build ** include all *.jar files-->
+    
+    <fileset dir="${project.lib}" includes="*.jar">
+      <include name="**/*.jar"/> 
+    </fileset>
+		
+    <!-- Second place to look is in the path defined by third_party-jars. Property as defined 
+         above ** include all *.jar files -->
+         
+    <fileset dir="${third_party-jars}" includes="*.jar">
+      <include name="**/*.jar"/>
+    </fileset>
+		
+    <!-- Then look for all classes under the project.classes directory -->
+		
+    <pathelement location="/classes"/> 
+		
+    <!-- Also need to include the servlet.jar in the classpath -->
+	
+  </path>
+	
+</project>

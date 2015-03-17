@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <xsd:element name="project">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="ftse"/>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="ftse">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="date" minOccurs="0" type="xsd:timeInstant"/>
+          <xsd:element name="indexValue" minOccurs="0" type="xsd:double"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+
+  </xsd:schema>
