@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The Synapse class is used to connect Neurons together. Synapses are created with
  * adjustable random weights.

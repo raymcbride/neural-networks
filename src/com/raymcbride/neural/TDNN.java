@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The TDNN class is used to create Time Delay Neural Networks
  *

@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The DataProcessor class is used to scale the input data between 0 and 1
  *

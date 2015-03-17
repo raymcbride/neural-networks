@@ -1,3 +1,5 @@
+package com.raymcbride.neural;
+
 /**
  * The Neuron class is the abstract base class for all Neurons
  *
