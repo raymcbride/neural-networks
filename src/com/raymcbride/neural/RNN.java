@@ -4,7 +4,7 @@ package com.raymcbride.neural;
  * The RNN class is based on the Elman Network, which has recurrency at the Hidden Layer.
  * In addition, there is a self loop at the context layer
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class RNN extends Network{
 

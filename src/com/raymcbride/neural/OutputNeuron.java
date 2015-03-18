@@ -3,7 +3,7 @@ package com.raymcbride.neural;
 /**
  * The OutputNeuron class creates Output Neurons
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class OutputNeuron extends Neuron{
 

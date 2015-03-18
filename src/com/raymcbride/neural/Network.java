@@ -11,7 +11,7 @@ import java.io.*;
  * @see TDNN
  * @see RNN
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 abstract class Network{
 

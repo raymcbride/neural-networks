@@ -9,7 +9,7 @@ import org.w3c.dom.*;
  * The Test class is the main class. It creates, trains, tests and validates MLP, TDNN and
  * RNN networks with the specified parameters
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class Test{
 

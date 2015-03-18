@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * The OutputFile class creates log files
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class OutputFile{
 

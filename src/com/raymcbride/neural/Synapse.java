@@ -6,7 +6,7 @@ package com.raymcbride.neural;
  *
  * @see ContextSynapse
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class Synapse{
 

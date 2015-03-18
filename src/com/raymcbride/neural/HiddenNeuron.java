@@ -3,7 +3,7 @@ package com.raymcbride.neural;
 /**
  * The HiddenNeuron class is used to create Hidden Neurons
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class HiddenNeuron extends Neuron{
 
