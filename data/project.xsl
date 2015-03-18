@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/">
  <html>
- <title>Raymond McBride - MSc Computing Science Project 2004</title>
+ <title>neural-networks</title>
   <body>
   <h2 align="center">Financial Times Stock Exchange 100 Index</h2>
   <p align="center">
