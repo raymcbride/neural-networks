@@ -1,11 +1,25 @@
-# neural-networks
+## neural-networks
 
-This project uses Java and XML and therefore requires the Java API for XML Processing to be installed on the execution environment
+This project focuses on the ability of the Multilayer Perceptron, the Time Delay Neural Network and the Recurrent Neural Network at forecasting end of day closing price of the FTSE 100 Index.
 
-There are two options to run this project
+# Requirements
 
-- Navigate to /project/lib/ and execute project.jar
-- Navigate to /project/classes/ and execute java Test from a command prompt 
+- Java
+- Java API for XML Processing (JAXP)
+
+# Quickstart
+
+There are two options to run this project:
+
+Method 1
+
+    cd /project/lib/
+    java -jar project.jar
+
+Method 2
+
+    cd /project/classes/
+    java Test
 
 The source code for this project is available here:
 
@@ -25,6 +39,8 @@ The source code for this project is available here:
 - TDNN.java
 - Test.java
 - XMLParser.java
+
+# Documentation
 
 There are several other additional files also included. These are:
 
