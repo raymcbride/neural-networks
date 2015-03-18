@@ -6,7 +6,7 @@
   
   <property name="javadoc.windowtitle" value="Raymond's API"/>
   <property name="javadoc.doctitle" value="Raymond's API"/>
-  <property name="javadoc.bottom" value="Copyright &#169; 2004 Raymond McBride. All Rights Reserved."/>
+  <property name="javadoc.bottom" value="Copyright &#169; 2004 Ray McBride. All Rights Reserved."/>
   <property name="javadoc.author" value="true"/>
   <property name="javadoc.version" value="true"/>
   <property name="javadoc.use" value="true"/>
