@@ -3,8 +3,8 @@
 <!--  Please visit http://ant.apache.org/manual/index.html for full documentation of how 
 Ant works. THE DEFAULT IMPLEMENTATION FOR THIS IS target:clean_build.-->
 
-<project name="Raymonds API Top Level build" default="clean_build" basedir=".">
-  <description>This is the top level file for Raymond's API's.</description>
+<project name="Rays API Top Level build" default="clean_build" basedir=".">
+  <description>This is the top level file for Ray's API's.</description>
 	    
 <!-- ===================================================================================== -->
 <!-- ==================================== Globals ======================================== -->
@@ -28,10 +28,10 @@ Ant works. THE DEFAULT IMPLEMENTATION FOR THIS IS target:clean_build.-->
   <property name="project.data"  location="data"/>
   <property name="project.output"  location="output"/>
   <property name="project.resources"  location="resources"/>
-  <property name="project.author" value="Raymond McBride"/>
+  <property name="project.author" value="Ray McBride"/>
   
   <!-- The class root. Use this directory for rebuild. Never delete the classes dir! -->
-  <property name="Package_Class_Root" location="${project.classes}/com/mcbride"/>
+  <property name="Package_Class_Root" location="${project.classes}/com/raymcbride/neural"/>
   
 <!-- ===================================================================================== -->
 <!-- ==================================== Imports ======================================== -->
@@ -128,7 +128,7 @@ Ant works. THE DEFAULT IMPLEMENTATION FOR THIS IS target:clean_build.-->
   <target name="javadoc" description="javadoc"> 
     <mkdir dir="${project.docs}"/>
     <javadoc sourcepath="{project.src}"
-	     sourcefiles="src/BiasNeuron.java, src/ContextNeuron.java, src/ContextSynapse.java, src/DataProcessor.java, src/HiddenNeuron.java, src/InputNeuron.java, src/MLP.java, src/Network.java, src/Neuron.java, src/OutputFile.java, src/OutputNeuron.java, src/RNN.java, src/Synapse.java, src/TDNN.java, src/Test.java, src/XMLParser.java,"
+	     sourcefiles="src/com/raymcbride/neural/BiasNeuron.java, src/com/raymcbride/neural/ContextNeuron.java, src/com/raymcbride/neural/ContextSynapse.java, src/com/raymcbride/neural/DataProcessor.java, src/com/raymcbride/neural/HiddenNeuron.java, src/com/raymcbride/neural/InputNeuron.java, src/com/raymcbride/neural/MLP.java, src/com/raymcbride/neural/Network.java, src/com/raymcbride/neural/Neuron.java, src/com/raymcbride/neural/OutputFile.java, src/com/raymcbride/neural/OutputNeuron.java, src/com/raymcbride/neural/RNN.java, src/com/raymcbride/neural/Synapse.java, src/com/raymcbride/neural/TDNN.java, src/com/raymcbride/neural/Test.java, src/com/raymcbride/neural/XMLParser.java,"
 	     destdir="${project.docs}"
 	     author="${javadoc.author}"
 	     version="${javadoc.version}"
