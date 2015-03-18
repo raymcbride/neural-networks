@@ -4,7 +4,7 @@ package com.raymcbride.neural;
  * The ContextSynapse class is used to connect Context Neurons to Hidden Neurons. They
  * have a fixed weight of 1
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class ContextSynapse extends Synapse{
 

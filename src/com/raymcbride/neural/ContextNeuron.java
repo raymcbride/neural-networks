@@ -7,7 +7,7 @@ package com.raymcbride.neural;
  *
  * @see RNN
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class ContextNeuron extends Neuron{
 

@@ -3,7 +3,7 @@ package com.raymcbride.neural;
 /**
  * InputNeuron class is used to create Input Neurons
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class InputNeuron extends Neuron{
 

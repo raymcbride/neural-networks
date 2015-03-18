@@ -8,7 +8,7 @@ import java.io.*;
  * The XMLParser class is used to parse XML documents and create W3C DOM objects
  *
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 public class XMLParser{
 

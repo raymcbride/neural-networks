@@ -9,7 +9,7 @@ package com.raymcbride.neural;
  * @see BiasNeuron
  * @see ContextNeuron
  *
- * @author Raymond McBride
+ * @author Ray McBride
  */
 abstract class Neuron{
 
