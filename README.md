@@ -1,13 +1,13 @@
-## neural-networks
+# neural-networks
 
 This project focuses on the ability of the Multilayer Perceptron, the Time Delay Neural Network and the Recurrent Neural Network at forecasting end of day closing price of the FTSE 100 Index.
 
-# Requirements
+## Requirements
 
 - Java
 - Java API for XML Processing (JAXP)
 
-# Quickstart
+## Quickstart
 
 There are two options to run this project:
 
@@ -40,7 +40,7 @@ The source code for this project is available here:
 - Test.java
 - XMLParser.java
 
-# Documentation
+## Documentation
 
 There are several other additional files also included. These are:
 
