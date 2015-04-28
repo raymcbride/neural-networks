@@ -6,8 +6,13 @@ This project focuses on the ability of the Multilayer Perceptron, the�
 
 - Java
 - Java API for XML Processing (JAXP)
+- Ant
 
 ## Quickstart
+
+Build the project
+
+    ant full_build
 
 There are two options to run this project:
 
