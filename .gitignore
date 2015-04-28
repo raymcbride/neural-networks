@@ -8,3 +8,5 @@
 /.settings/
 .classpath
 *~
+.#*
+.*.swp
