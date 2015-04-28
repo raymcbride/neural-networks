@@ -6,25 +6,17 @@ This project focuses on the ability of the Multilayer Perceptron, the�
 
 - Java
 - Java API for XML Processing (JAXP)
-- Ant
+- Maven
 
 ## Quickstart
 
-Build the project
+Install the project:
 
-    ant full_build
+    mvn clean install
 
-There are two options to run this project:
+Run the project:
 
-Method 1
-
-    cd /project/lib/
-    java -jar project.jar
-
-Method 2
-
-    cd /project/classes/
-    java Test
+    mvn exec:java
 
 The source code for this project is available here:
 
@@ -52,5 +44,6 @@ There are several other additional files also included. These are:
 - The Javadoc
 - The data files Train500.xml, Test100.xml, Validate100.xml and Forecast5.xml
 - The project schema and XSL stylesheet
-- The ant build.xml used for compilation
+- An ant build.xml
+- A maven pom.xml
 
