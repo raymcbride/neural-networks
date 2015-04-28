@@ -2,6 +2,8 @@
 
 This project focuses on the ability of the Multilayer Perceptron, the Time Delay Neural Network and the Recurrent Neural Network at forecasting end of day closing price of the FTSE 100 Index.
 
+[![Build Status](https://travis-ci.org/raymcbride/neural-networks.svg?branch=master)](https://travis-ci.org/raymcbride/neural-networks)
+
 ## Requirements
 
 - Java
