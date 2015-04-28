@@ -2,3 +2,9 @@
 *.jar
 *.war
 *.ear
+/bin/
+/target/
+.project
+/.settings/
+.classpath
+*~
