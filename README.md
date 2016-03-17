@@ -49,3 +49,7 @@ There are several other additional files also included. These are:
 - An ant build.xml
 - A maven pom.xml
 
+## Further Reading
+
+[Project Report](https://raymcbride.com/portfolio/academic/projects/)
+
