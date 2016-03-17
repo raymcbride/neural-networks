@@ -52,4 +52,3 @@ There are several other additional files also included. These are:
 ## Further Reading
 
 [Project Report](https://raymcbride.com/portfolio/academic/projects/)
-
